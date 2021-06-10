@@ -8,13 +8,13 @@ pipeline{
 			}
 			stage('Two') {
 				steps {
-					inout('Do you want proceed?')
+					input('Do you want proceed?')
 				}
 			}
 			stage('Three') {
 				when {
 					not {
-						branch "master"
+						branch "main"
 					}
 				}
 				steps {
@@ -24,8 +24,8 @@ pipeline{
 			stage('Four') {
 					parallel {
 						stage('Unit Test') {
-								steps{
-									echo"Running the unit test.."
+								steps {
+									echo 'Running the unit test..'
 								}
 						}
 						stage('Integration test') {

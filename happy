@@ -2,7 +2,7 @@ pipeline{
 	agent any
 		stages{
 			stage('One') {
-				step {
+				steps {
 					echo 'Hi, this is siva'
 				}
 			}
@@ -29,12 +29,6 @@ pipeline{
 								}
 						}
 						stage('Integration test') {
-								agent {
-									docker {
-										reusenode false
-										image 'ubuntu'
-									}
-								}
 								steps {
 									echo 'Running the integration test..'
 								}

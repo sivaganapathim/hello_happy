@@ -3,7 +3,7 @@
 pipeline {
 
     agent {
-        stage {
+        stage('node') {
             image 'node'
             args '-u root'
         }

@@ -6,12 +6,12 @@ pipeline{
 					echo 'Hi, this is siva'
 				}
 			}
-			satge('Two'){
+			stage('Two') {
 				steps {
 					inout('Do you want proceed?')
 				}
 			}
-			satage('Three') {
+			stage('Three') {
 				when {
 					not {
 						branch "master"
